@@ -1,6 +1,9 @@
-function sayHello(name) {
-    console.log('Hello ' + name);
-}
+// function sayHello(name) {
+//     console.log('Hello ' + name);
+// }
 
-//sayHello('Mosh');
-console.log(window);
+// //sayHello('Mosh');
+// console.log(window);
+
+var message = '';
+console.log(global.message);
