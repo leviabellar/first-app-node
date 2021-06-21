@@ -38,8 +38,8 @@
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
 
-emitter.on('Noise', function() {
-    console.log("Noise Made");
+emitter.on('Noise', (arg) => {
+    console.log("Noise Made", arg);
 });
 
-emitter.emit('Noise');
+emitter.emit('Noise', { id: 1, url: 'http://' });
