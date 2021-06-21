@@ -8,4 +8,7 @@
 // var message = '';
 // console.log(global.message);
 
-console.log(module);
+//console.log(module);
+
+const logger = require('./logger');
+logger.log("Hello");
