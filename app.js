@@ -14,8 +14,8 @@
 // log("Hello");
 
 //const path = require('path');
-const os = require('os');
-const fs = require('fs');
+// const os = require('os');
+// const fs = require('fs');
 
 // var totalMemory = os.totalmem();
 // var freeMemory = os.freemem();
@@ -27,10 +27,19 @@ const fs = require('fs');
 
 //console.log(pathObj);
 
-const files = fs.readdirSync('./');
-console.log(files);
+// const files = fs.readdirSync('./');
+// console.log(files);
 
-fs.readdir('$', function(err, files) {
-    if (err) console.log('Error', err);
-    else console.log('Result', files);
+// fs.readdir('$', function(err, files) {
+//     if (err) console.log('Error', err);
+//     else console.log('Result', files);
+// });
+
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
+emitter.on('Noise', function() {
+    console.log("Noise Made");
 });
+
+emitter.emit('Noise');
