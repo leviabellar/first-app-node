@@ -35,11 +35,23 @@
 //     else console.log('Result', files);
 // });
 
-const EventEmitter = require('events');
-const emitter = new EventEmitter();
+// const EventEmitter = require('events');
+// const emitter = new EventEmitter();
 
-emitter.on('Noise', (arg) => {
-    console.log("Noise Made", arg);
+// emitter.on('Noise', (arg) => {
+//     console.log("Noise Made", arg);
+// });
+
+// emitter.emit('Noise', { id: 1, url: 'http://' });
+
+const http = require('http');
+
+const server = http.createServer();
+
+server.on('connection', (socket) => {
+    console.log('New Connection');
 });
 
-emitter.emit('Noise', { id: 1, url: 'http://' });
+server.listen(3000);
+
+console.log('Listening on port 3000...');
